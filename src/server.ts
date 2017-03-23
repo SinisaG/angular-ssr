@@ -40,7 +40,7 @@ app.engine('.html', createEngine({
     // stateless providers only since it's shared
   ]
 }));
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 3333);
 app.set('views', __dirname);
 app.set('view engine', 'html');
 app.set('json spaces', 2);
@@ -69,7 +69,7 @@ import { serverApi, createTodoApi } from './backend/api';
 app.get('/data.json', serverApi);
 app.use('/api', createTodoApi());
 
-process.on('uncaughtException', function (err) { 
+process.on('uncaughtException', function (err) {
   console.error('Catching uncaught errors to avoid process crash', err);
 });
 

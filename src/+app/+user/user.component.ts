@@ -23,7 +23,6 @@ export class UserComponent {
     this.model
       .get(`https://api.github.com/users/${name}`)
       .subscribe(data => {
-        console.log(data);
         this.user = data;
     });
   }
