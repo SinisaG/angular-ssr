@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ApiService } from './api.service';
+import { Meta } from './meta.service';
 import { ModelService } from './model/model.service';
 
 const MODULES = [
@@ -23,7 +24,8 @@ const COMPONENTS = [
 
 const PROVIDERS = [
   ModelService,
-  ApiService
+  ApiService,
+  Meta
 ]
 
 @NgModule({
